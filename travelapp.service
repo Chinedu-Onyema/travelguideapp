@@ -1,0 +1,14 @@
+[Unit]
+Description=TravelApp
+After=network.target
+
+
+[Service]
+Environment=KNOWLEDGE_BASE_ID=REPLACE_WITH_KNOWLEDGE_BASE_ID
+User=ec2-user
+WorkingDirectory=/home/ec2-user/travelapp/
+ExecStart=/home/ec2-user/.local/bin/gunicorn --bind 0.0.0.0:8000 app:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
