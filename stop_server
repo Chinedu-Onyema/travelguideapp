@@ -1,0 +1,3 @@
+#!/bin/bash
+systemctl stop travelapp || 0
+systemctl stop nginx || 0

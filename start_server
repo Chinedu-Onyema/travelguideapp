@@ -1,0 +1,4 @@
+#!/bin/bash
+systemctl restart nginx || 0
+systemctl enable --now travelapp
+systemctl enable --now nginx
