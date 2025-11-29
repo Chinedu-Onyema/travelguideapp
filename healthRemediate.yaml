@@ -1,0 +1,14 @@
+---
+schemaVersion: "2.2"
+description: "Kill a process by name on an instance"
+parameters:
+  CommandName:
+      type: "String"
+      description: "Name of the process to kill"
+mainSteps:
+- action: "aws:runShellScript"
+  name: "exampleShellScript"
+  inputs:
+      runCommand:
+      - "echo Killing process {{CommandName}}"
+      - "killall {{CommandName}}"
